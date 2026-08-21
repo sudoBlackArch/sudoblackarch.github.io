@@ -6,19 +6,19 @@ index.html
 exploit.js
 
 # GoldHEN Payloads
-goldhen.bin
-goldhen5.bin
+../payloads/goldhen.bin
+../payloads/goldhen5.bin
 
 # Utility Payloads
-Kernel-Clock.bin
-app2usb.bin
-appcache-install.bin
-backup.bin
-disable-updates.bin
-enable-updates.bin
-ftp.bin
-history-blocker.bin
-ps4debug.bin
-pup-decrypt.bin
-restore.bin
-rif-renamer.bin
+../payloads/Kernel-Clock.bin
+../payloads/app2usb.bin
+../payloads/appcache-install.bin
+../payloads/backup.bin
+../payloads/disable-updates.bin
+../payloads/enable-updates.bin
+../payloads/ftp.bin
+../payloads/history-blocker.bin
+../payloads/ps4debug.bin
+../payloads/pup-decrypt.bin
+../payloads/restore.bin
+../payloads/rif-renamer.bin
