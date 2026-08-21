@@ -1,1 +1,0 @@
-# Fork of [sudoblackarch.github.io](https://github.com/sudoBlackArch/sudoblackarch.github.io)
