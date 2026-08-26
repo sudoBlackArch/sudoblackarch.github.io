@@ -427,6 +427,14 @@
                 </button>
 
                 <div id="fwSelectorList" class="fw-selector-list" role="listbox">
+                    <div class="fw-option fw-slop" data-fw="slop" tabindex="0" role="option">
+                        <div class="fw-option-info">
+                            <div class="fw-option-title">FW 11.50–13.00</div>
+                            <div class="fw-option-desc">Slopkit chained with lapse and poops</div>
+                        </div>
+                        <div class="fw-option-version">Offline Slopkit</div>
+                    </div>
+
                     <div class="fw-option fw-css" data-fw="css" tabindex="0" role="option">
                         <div class="fw-option-info">
                             <div class="fw-option-title">FW 6.00–11.02</div>
@@ -512,6 +520,9 @@
                     break;
                 case 'css':
                     window.location.href = 'css/version-selector.html';
+                    break;
+                case 'slop':
+                    window.location.href = 'slopkit/cache.html';
                     break;
             }
         }

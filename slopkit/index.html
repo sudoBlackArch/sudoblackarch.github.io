@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlayStation Pulse Slopkit Host</title>
+<style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      background: #050706;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      background-color: #050706;
+      background-image: linear-gradient(rgba(115, 245, 166, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(115, 245, 166, 0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      color: #f1f6f2;
+      display: flex;
+      flex-direction: column;
+      font: 16px/1.5 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex: 1 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 24px 0 20px;
+      width: calc(100% - 64px);
+      max-width: 1120px;
+    }
+
+    .header-section,
+    .status-container {
+      background: rgba(8, 12, 10, 0.92);
+      border: 1px solid #34443a;
+    }
+
+    .header-section {
+      margin-bottom: 12px;
+      padding: 20px 28px 22px;
+      position: relative;
+    }
+
+    .header-section::before {
+      color: #73f5a6;
+      content: "●  PS4 / Slopkit HOST";
+      display: block;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      margin-bottom: 16px;
+    }
+
+    .header-section::after {
+      color: #86958b;
+      content: "SYS / READY   //   AUTO JAILBREAK";
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      position: absolute;
+      right: 28px;
+      top: 21px;
+    }
+
+    .main-title {
+      color: #f1f6f2;
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: -0.07em;
+      line-height: 1.05;
+    }
+
+    .main-title::before {
+      color: #73f5a6;
+      content: "> ";
+    }
+
+    .subtitle {
+      color: #73f5a6;
+      font-size: 16px;
+      margin-top: 12px;
+    }
+
+    .version-info {
+      color: #b4c1b8;
+      font-size: 14px;
+      margin-top: 7px;
+    }
+
+    #UA {
+      color: #86958b;
+      display: block;
+      font-size: 12px;
+      margin-top: 7px;
+      word-wrap: break-word;
+    }
+
+    .status-container {
+      color: #b4c1b8;
+      padding: 14px 18px;
+    }
+
+    .status-label {
+      border-bottom: 1px solid #34443a;
+      color: #b4c1b8;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+      padding-bottom: 9px;
+      text-transform: uppercase;
+    }
+
+    #console {
+      background: #080c0a;
+      border: 1px solid #607b68;
+      color: #f1f6f2;
+      font: inherit;
+      font-size: 13px;
+      line-height: 1.45;
+      max-height: 132px;
+      min-height: 42px;
+      overflow: auto;
+      padding: 10px 14px;
+      white-space: pre-wrap;
+    }
+
+    .credits {
+      border-top: 1px solid #34443a;
+      color: #b4c1b8;
+      flex: 0 0 auto;
+      font-size: 13px;
+      margin: 0 auto;
+      padding: 8px 20px 10px;
+      text-align: center;
+      width: calc(100% - 64px);
+      max-width: 1120px;
+    }
+
+    .credits a {
+      color: #f1f6f2;
+    }
+
+    .credits a:hover,
+    .credits a:focus {
+      color: #73f5a6;
+    }
+
+    .credits-line {
+      display: inline;
+    }
+
+    .credits-line+.credits-line::before {
+      color: #607b68;
+      content: "  //  ";
+    }
+
+    .credit-label {
+      color: #b4c1b8;
+    }
+
+    #console.ok {
+        color:#7fd0a0;
+    }
+    #console.bad {
+        color:#d08a7f;
+    }
+    #console.warn {
+        color:#d8c07f;
+    }
+
+    @media (max-width: 820px) {
+      body {
+        overflow: auto;
+      }
+
+      .container {
+        justify-content: flex-start;
+        padding: 24px 0 20px;
+        width: calc(100% - 32px);
+        max-width: 560px;
+      }
+
+      .header-section {
+        padding: 20px 18px 22px;
+      }
+
+      .header-section::after {
+        display: none;
+      }
+
+      .main-title {
+        font-size: 44px;
+      }
+
+      .credits-line {
+        display: block;
+        margin: 4px 0;
+      }
+
+      .credits-line+.credits-line::before {
+        content: "";
+      }
+    }
+
+    @media (max-width: 430px) {
+      .main-title {
+        font-size: 30px;
+      }
+    }
+</style>
+  <script>
+    if (window.applicationCache.status == '0') {
+      window.location.replace("cache.html");
+    }
+  </script>
+</head>
+
+<body>
+  <main class="container">
+    <section class="header-section">
+      <h1 class="main-title">PlayStation Pulse Slopkit Host</h1>
+      <p class="subtitle">Offline Slopkit Auto GoldHEN by Telegram PlayStation Pulse</p>
+      <p class="version-info">Slopkit PS4 FW 11.50–13.00 GoldHEN v2.4b18.10</p>
+      <p id="UA">Running on:</p>
+    </section>
+
+    <section class="status-container">
+      <div class="status-label">Exploit output</div>
+      <pre id="console">detecting firmware...</pre>
+    </section>
+
+  <footer class="credits">
+    <div class="credits-line">
+      <span class="credit-label">Premium Game Servers -</span>
+      <a href="https://nodeplay.net/" class="nodeplay-link">NodePlay</a>
+    </div>
+    <div class="credits-line">
+      <span class="credit-label">Author:</span>
+      <a href="https://t.me/sudoBlackArch" class="telegram-link">BlackArch</a>
+      <span style="margin: 0 1rem;">•</span>
+      <span class="credit-label">Telegram:</span>
+      <a href="https://t.me/PlayStation_Pulse" class="credit-link">PlayStation Pulse</a>
+    </div>
+  </footer>
+
+<script>
+(function () {
+    var stateEl = document.getElementById("console");
+    var detEl = document.getElementById("UA");
+    function setState(t, c) { stateEl.textContent = t; stateEl.className = c || ""; }
+    var params = new URLSearchParams(location.search);
+
+    var key = null, fwnum = null;
+    var m = /PlayStation\s+4[\/ ](\d+)\.(\d+)/.exec(navigator.userAgent);
+    if (m) {
+        var minor = parseInt(m[2], 16);
+        var ms = minor.toString(16);
+        if (ms.length < 2) ms = "0" + ms;
+        key = m[1] + "." + ms;
+        fwnum = parseInt(m[1], 10) * 100 + parseInt(ms, 10);
+    }
+    var bug = null, why = "";
+    var forced = params.get("bug");
+    if (forced === "lapse" || forced === "poops") {
+        bug = forced; why = "forced via ?bug=" + forced;
+    } else if (!key) {
+        why = "user-agent is not a PlayStation 4";
+    } else if (fwnum <= 1202) {
+        bug = "lapse"; why = key + " <= 12.02";
+    } else if (fwnum >= 1250) {
+        bug = "poops"; why = key + " >= 12.50";
+    } else {
+        why = key + " -- no working bug (lapse ends at 12.02, poops needs 12.50)";
+    }
+    detEl.innerText += " " + navigator.userAgent;
+
+    if (!bug) { setState("UNSUPPORTED FIRMWARE", "bad"); return; }
+
+    var target = (bug === "lapse" ? "run_lapse.html" : "run_poops.html")
+        + location.search;
+    function go() { setState("loading " + bug + " chain...", "warn");
+                    location.replace(target); }
+
+    function waitForTap(msg, action) {
+        setState(msg, "warn");
+        function fire() {
+            window.removeEventListener("click", fire);
+            window.removeEventListener("keydown", fire);
+            action();
+        }
+        window.addEventListener("click", fire);
+        window.addEventListener("keydown", fire);
+    }
+
+    var ac = window.applicationCache;
+    if (!ac || !document.documentElement.hasAttribute("manifest")) {
+        go();
+    } else if (!navigator.onLine) {
+        setCache("offline -- from cache", true);
+        go();
+    } else if (ac.status === ac.IDLE) {
+        setCache("cached", true);
+        go();
+    } else if (ac.status === ac.UPDATEREADY) {
+        try { ac.swapCache(); } catch (e) {}
+        setCache("update downloaded", true);
+        waitForTap("UPDATE READY -- press X or tap to reload & run",
+                   function () { location.reload(); });
+    } else {
+        setCache("checking cache...");
+        ac.addEventListener("downloading",
+            function () { setCache("caching for offline (first run)..."); }, false);
+        ac.addEventListener("progress", function (e) {
+            if (e && e.total)
+                setCache("caching " + Math.round((e.loaded / e.total) * 100) + "%");
+        }, false);
+
+        ac.addEventListener("cached", function () {
+            setCache("cached for offline use", true);
+            waitForTap("CACHED (first run) -- press X or tap to run", go);
+        }, false);
+        ac.addEventListener("updateready", function () {
+            try { ac.swapCache(); } catch (e) {}
+            setCache("update downloaded", true);
+            waitForTap("UPDATE READY -- press X or tap to reload & run",
+                       function () { location.reload(); });
+        }, false);
+
+        ac.addEventListener("noupdate", function () {
+            setCache("cached -- offline ready", true);
+            go();
+        }, false);
+        ac.addEventListener("error", function () {
+            setCache("cache unavailable");
+            waitForTap("CACHE FAILED -- press X or tap to run anyway", go);
+        }, false);
+        ac.addEventListener("obsolete", function () {
+            setCache("cache obsolete");
+            waitForTap("CACHE OBSOLETE -- press X or tap to run", go);
+        }, false);
+    }
+})();
+</script>
+</body>
+
+</html>
