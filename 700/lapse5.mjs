@@ -1925,7 +1925,7 @@ function loadPayload() {
   // Why xhr instead of fetch? More universal support, more control, better errors, etc.
   log(`loading payload`);
   const xhr = new XMLHttpRequest();
-  xhr.open('GET','goldhen5.bin');
+  xhr.open('GET','../payloads/goldhen5.bin');
   xhr.responseType = "arraybuffer";
   xhr.onreadystatechange = function () {
     // When request is 'DONE'

@@ -88,7 +88,7 @@ function load_PSFreeFix(){
     const Confirmation = confirm("Are you sure you want to load the PSFree Fix payload?");
     if (Confirmation) {
         // First try local loading through GoldHen
-        Loadpayloadlocal("./payloads/ps4-psfree-fix.bin");
+        Loadpayloadlocal("../payloads/ps4-psfree-fix.bin");
         
         // Also show loading message
         if (document.getElementById('log')) {
@@ -102,7 +102,7 @@ function load_PSFreeFix(){
 function load_app2usb(){
     const Confirmation = confirm("Load App2USB payload? This allows transferring applications to USB storage.");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/app2usb.bin");
+        Loadpayloadlocal("../payloads/app2usb.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "App2USB Payload Loaded!";
@@ -114,7 +114,7 @@ function load_app2usb(){
 function load_appcache_install(){
     const Confirmation = confirm("Load AppCache Install payload?");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/appcache-install.bin");
+        Loadpayloadlocal("../payloads/appcache-install.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "AppCache Install Payload Loaded!";
@@ -126,7 +126,7 @@ function load_appcache_install(){
 function load_backup(){
     const Confirmation = confirm("Load Backup payload? This will backup your system data.");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/backup.bin");
+        Loadpayloadlocal("../payloads/backup.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "Backup Payload Loaded!";
@@ -138,7 +138,7 @@ function load_backup(){
 function load_disable_updates(){
     const Confirmation = confirm("Load Disable Updates payload? This will block system updates.");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/disable-updates.bin");
+        Loadpayloadlocal("../payloads/disable-updates.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "Disable Updates Payload Loaded!";
@@ -150,7 +150,7 @@ function load_disable_updates(){
 function load_enable_updates(){
     const Confirmation = confirm("Load Enable Updates payload? This will allow system updates.");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/enable-updates.bin");
+        Loadpayloadlocal("../payloads/enable-updates.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "Enable Updates Payload Loaded!";
@@ -162,7 +162,7 @@ function load_enable_updates(){
 function load_ftp(){
     const Confirmation = confirm("Load FTP Server payload? This will start an FTP server on your PS4.");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/ftp.bin");
+        Loadpayloadlocal("../payloads/ftp.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "FTP Server Payload Loaded!";
@@ -174,7 +174,7 @@ function load_ftp(){
 function load_history_blocker(){
     const Confirmation = confirm("Load History Blocker payload? This will block browser history tracking.");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/history-blocker.bin");
+        Loadpayloadlocal("../payloads/history-blocker.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "History Blocker Payload Loaded!";
@@ -186,7 +186,7 @@ function load_history_blocker(){
 function load_ps4debug(){
     const Confirmation = confirm("Load PS4Debug payload? This enables debugging features.");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/ps4debug.bin");
+        Loadpayloadlocal("../payloads/ps4debug.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "PS4Debug Payload Loaded!";
@@ -198,7 +198,7 @@ function load_ps4debug(){
 function load_pup_decrypt(){
     const Confirmation = confirm("Load PUP Decrypt payload? This allows decrypting PS4 update files.");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/pup-decrypt.bin");
+        Loadpayloadlocal("../payloads/pup-decrypt.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "PUP Decrypt Payload Loaded!";
@@ -210,7 +210,7 @@ function load_pup_decrypt(){
 function load_restore(){
     const Confirmation = confirm("Load Restore payload? This will restore your system data.");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/restore.bin");
+        Loadpayloadlocal("../payloads/restore.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "Restore Payload Loaded!";
@@ -222,7 +222,7 @@ function load_restore(){
 function load_rif_renamer(){
     const Confirmation = confirm("Load RIF Renamer payload? This tool manages license files.");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/rif-renamer.bin");
+        Loadpayloadlocal("../payloads/rif-renamer.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "RIF Renamer Payload Loaded!";
@@ -234,7 +234,7 @@ function load_rif_renamer(){
 function load_webrte(){
     const Confirmation = confirm("Load WebRTE payload? This enables real-time editing features.");
     if (Confirmation) {
-        Loadpayloadlocal("./payloads/WebRTE_900.bin");
+        Loadpayloadlocal("../payloads/WebRTE_900.bin");
         if (document.getElementById('log')) {
             awaitpl();
             LoadedMSG = "WebRTE Payload Loaded!";

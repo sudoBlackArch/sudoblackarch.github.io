@@ -171,7 +171,7 @@ window.toogle_payload = toogle_payload;
 
 function Exploit_done(){
 load_exploit_done();
-toogle_payload('goldhen5.bin');
+toogle_payload('../payloads/goldhen5.bin');
 }
 
 // sys/socket.h

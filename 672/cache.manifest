@@ -1,21 +1,22 @@
 CACHE MANIFEST 
+#VERSION 1.0
 
 CACHE: 
 index.html
 pl_loader.js
-goldhen.bin
-goldhen5.bin
-ftp.bin
-ps4debug.bin
-app2usb.bin
-backup.bin
-restore.bin
-disable-updates.bin
-enable-updates.bin
-rif-renamer.bin
-appcache-install.bin
-history-blocker.bin
-pup-decrypt.bin
+../payloads/goldhen.bin
+../payloads/goldhen5.bin
+../payloads/ftp.bin
+../payloads/ps4debug.bin
+../payloads/app2usb.bin
+../payloads/backup.bin
+../payloads/restore.bin
+../payloads/disable-updates.bin
+../payloads/enable-updates.bin
+../payloads/rif-renamer.bin
+../payloads/appcache-install.bin
+../payloads/history-blocker.bin
+../payloads/pup-decrypt.bin
 
 NETWORK: 
 * 
